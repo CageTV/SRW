@@ -1,0 +1,540 @@
+{
+ "_comment": "Records live in the plugins; these rules re-apply them at game start if another mod overwrote them. Form refs are 'Plugin.esp|HEXID' (local id).",
+ "ingestible_effects": [
+  {
+   "form": "Savage Requiem World.esp|000E48",
+   "effects": [
+    "Update.esm|002EE1"
+   ]
+  },
+  {
+   "form": "Savage Requiem World.esp|000E49",
+   "effects": [
+    "Update.esm|002EE3"
+   ]
+  },
+  {
+   "form": "Savage Requiem World.esp|000E4A",
+   "effects": [
+    "Update.esm|002EE4"
+   ]
+  },
+  {
+   "form": "Savage Requiem World.esp|000895",
+   "effects": [
+    "Update.esm|002EE2"
+   ]
+  },
+  {
+   "form": "Savage Requiem World.esp|000896",
+   "effects": [
+    "Update.esm|002EE4"
+   ]
+  },
+  {
+   "form": "Savage Requiem World.esp|0008DA",
+   "effects": [
+    "Update.esm|002EE3"
+   ]
+  },
+  {
+   "form": "Savage Requiem World.esp|0010D6",
+   "effects": [
+    "Update.esm|002EE1"
+   ]
+  },
+  {
+   "form": "Savage Requiem World.esp|0010D9",
+   "effects": [
+    "Update.esm|002EE1"
+   ]
+  },
+  {
+   "form": "Savage Requiem World.esp|0010D7",
+   "effects": [
+    "Update.esm|002EE3"
+   ]
+  },
+  {
+   "form": "Savage Requiem World.esp|0013DC",
+   "effects": [
+    "Update.esm|002EE1"
+   ]
+  },
+  {
+   "form": "Savage Requiem World.esp|0013DD",
+   "effects": [
+    "Update.esm|002EE3"
+   ]
+  },
+  {
+   "form": "Savage Requiem World.esp|000D32",
+   "effects": [
+    "Update.esm|002EE1"
+   ]
+  },
+  {
+   "form": "Savage Requiem World.esp|000D33",
+   "effects": [
+    "Update.esm|002EE3"
+   ]
+  }
+ ],
+ "formlist_add": [
+  {
+   "list": "ccQDRSSE001-SurvivalMode.esl|0008B0",
+   "items": [
+    "Savage Requiem World.esp|000E48",
+    "Savage Requiem World.esp|000895",
+    "Savage Requiem World.esp|0010D6",
+    "Savage Requiem World.esp|0010D9",
+    "Savage Requiem World.esp|0013DC",
+    "Savage Requiem World.esp|000D32"
+   ]
+  }
+ ],
+ "weapon_keyword": [
+  {
+   "_comment": "silver weapons hurt undead: WeapMaterialSilver is what SilverPerk checks",
+   "nameContains": [
+    "silver"
+   ],
+   "nameExclude": [
+    "silver-blood",
+    "silverblood",
+    "silver hand",
+    "silver-hand"
+   ],
+   "requireAny": [
+    "Skyrim.esm|01E711",
+    "Skyrim.esm|01E712",
+    "Skyrim.esm|01E713",
+    "Skyrim.esm|01E714",
+    "Skyrim.esm|06D930",
+    "Skyrim.esm|06D931",
+    "Skyrim.esm|06D932"
+   ],
+   "keyword": "Skyrim.esm|10AA1A"
+  },
+  {
+   "_comment": "Dawnguard weapons are silver (same rule as Dawnguard Weapons Are Silver)",
+   "requireAll": [
+    "Dawnguard.esm|00D839"
+   ],
+   "requireAny": [
+    "Skyrim.esm|01E711",
+    "Skyrim.esm|01E712",
+    "Skyrim.esm|01E713",
+    "Skyrim.esm|01E714",
+    "Skyrim.esm|06D930",
+    "Skyrim.esm|06D931",
+    "Skyrim.esm|06D932"
+   ],
+   "keyword": "Skyrim.esm|10AA1A"
+  }
+ ],
+ "player_perks": [
+  "Skyrim.esm|10D685"
+ ],
+ "armor_warmth": [
+  {
+   "_comment": "vanilla Survival default for armor that lost it (Requiem and many mods): heavy/light armor warm, poor clothing cold",
+   "warm": "Update.esm|002ED9",
+   "cold": "Update.esm|002ED8",
+   "warmIfAny": [
+    "Skyrim.esm|06BBD2",
+    "Skyrim.esm|06BBD3"
+   ],
+   "coldIfAny": [
+    "Skyrim.esm|0A865C"
+   ],
+   "slotMask": 4239
+  }
+ ],
+ "package_list_by_race": [
+  {
+   "race": "Skyrim.esm|0B7998",
+   "list": "Savage Requiem World.esp|000F33",
+   "_name": "?"
+  },
+  {
+   "race": "Dawnguard.esm|00D0B2",
+   "list": "Savage Requiem World.esp|000F13",
+   "_name": "?"
+  },
+  {
+   "race": "Skyrim.esm|0131F4",
+   "list": "Savage Requiem World.esp|000F14",
+   "_name": "?"
+  },
+  {
+   "race": "Dawnguard.esm|00D0B6",
+   "list": "Savage Requiem World.esp|000F17",
+   "_name": "?"
+  },
+  {
+   "race": "Dawnguard.esm|019FD3",
+   "list": "Savage Requiem World.esp|000F33",
+   "_name": "?"
+  },
+  {
+   "race": "Dawnguard.esm|006AFA",
+   "list": "Savage Requiem World.esp|000F33",
+   "_name": "?"
+  },
+  {
+   "race": "Dawnguard.esm|00894D",
+   "list": "Savage Requiem World.esp|000F33",
+   "_name": "?"
+  },
+  {
+   "race": "Dawnguard.esm|0023E2",
+   "list": "Savage Requiem World.esp|000F33",
+   "_name": "?"
+  },
+  {
+   "race": "Dragonborn.esm|027BFC",
+   "list": "Savage Requiem World.esp|000F1A",
+   "_name": "?"
+  },
+  {
+   "race": "Dragonborn.esm|01B637",
+   "list": "Savage Requiem World.esp|000F1C",
+   "_name": "?"
+  },
+  {
+   "race": "Dragonborn.esm|02B014",
+   "list": "Savage Requiem World.esp|000F1F",
+   "_name": "?"
+  },
+  {
+   "race": "Dragonborn.esm|028580",
+   "list": "Savage Requiem World.esp|000F25",
+   "_name": "?"
+  },
+  {
+   "race": "Dragonborn.esm|014449",
+   "list": "Savage Requiem World.esp|000F28",
+   "_name": "?"
+  },
+  {
+   "race": "Dragonborn.esm|01CAD8",
+   "list": "Savage Requiem World.esp|000F19",
+   "_name": "?"
+  },
+  {
+   "race": "Skyrim.esm|0131EF",
+   "list": "Savage Requiem World.esp|001029",
+   "_name": "?"
+  },
+  {
+   "race": "Skyrim.esm|000D53",
+   "list": "Savage Requiem World.esp|000F1E",
+   "_name": "?"
+  },
+  {
+   "race": "Skyrim.esm|0131FB",
+   "list": "Savage Requiem World.esp|000F2E",
+   "_name": "?"
+  },
+  {
+   "race": "Skyrim.esm|0EB872",
+   "list": "Savage Requiem World.esp|000F33",
+   "_name": "?"
+  },
+  {
+   "race": "Skyrim.esm|0F3903",
+   "list": "Savage Requiem World.esp|000F18",
+   "_name": "?"
+  },
+  {
+   "race": "Skyrim.esm|088794",
+   "list": "Savage Requiem World.esp|000FD4",
+   "_name": "?"
+  },
+  {
+   "race": "Skyrim.esm|013209",
+   "list": "Savage Requiem World.esp|000F39",
+   "_name": "?"
+  },
+  {
+   "race": "Skyrim.esm|013208",
+   "list": "Savage Requiem World.esp|000F3A",
+   "_name": "?"
+  },
+  {
+   "race": "Skyrim.esm|0F1182",
+   "list": "Savage Requiem World.esp|000F39",
+   "_name": "?"
+  },
+  {
+   "race": "Skyrim.esm|0131F5",
+   "list": "Savage Requiem World.esp|000F1A",
+   "_name": "AtronachFlameRace"
+  },
+  {
+   "race": "Skyrim.esm|0131F6",
+   "list": "Savage Requiem World.esp|000F1A",
+   "_name": "AtronachFrostRace"
+  },
+  {
+   "race": "Skyrim.esm|0131F7",
+   "list": "Savage Requiem World.esp|000F1A",
+   "_name": "AtronachStormRace"
+  },
+  {
+   "race": "Skyrim.esm|0131E8",
+   "list": "Savage Requiem World.esp|000F29",
+   "_name": "BearBlackRace"
+  },
+  {
+   "race": "Skyrim.esm|0131E7",
+   "list": "Savage Requiem World.esp|000F29",
+   "_name": "BearBrownRace"
+  },
+  {
+   "race": "Skyrim.esm|0131E9",
+   "list": "Savage Requiem World.esp|000F29",
+   "_name": "BearSnowRace"
+  },
+  {
+   "race": "Skyrim.esm|106C10",
+   "list": "Savage Requiem World.esp|000F37",
+   "_name": "C06WolfSpiritRace"
+  },
+  {
+   "race": "Skyrim.esm|0131EB",
+   "list": "Savage Requiem World.esp|000F11",
+   "_name": "ChaurusRace"
+  },
+  {
+   "race": "Skyrim.esm|0A5601",
+   "list": "Savage Requiem World.esp|000F11",
+   "_name": "ChaurusReaperRace"
+  },
+  {
+   "race": "Dawnguard.esm|0051FB",
+   "list": "Savage Requiem World.esp|000F11",
+   "_name": "DLC1ChaurusHunterRace"
+  },
+  {
+   "race": "Dawnguard.esm|00C5F0",
+   "list": "Savage Requiem World.esp|000F12",
+   "_name": "DLC1DeathHoundRace"
+  },
+  {
+   "race": "Dawnguard.esm|00A2C6",
+   "list": "Savage Requiem World.esp|000F15",
+   "_name": "DLC1GargoyleRace"
+  },
+  {
+   "race": "Dawnguard.esm|010D00",
+   "list": "Savage Requiem World.esp|000F15",
+   "_name": "DLC1GargoyleVariantBossRace"
+  },
+  {
+   "race": "Dawnguard.esm|019D86",
+   "list": "Savage Requiem World.esp|000F15",
+   "_name": "DLC1GargoyleVariantGreenRace"
+  },
+  {
+   "race": "Dawnguard.esm|018B33",
+   "list": "Savage Requiem World.esp|000F16",
+   "_name": "DLC1HuskyArmoredRace"
+  },
+  {
+   "race": "Dawnguard.esm|018B36",
+   "list": "Savage Requiem World.esp|000F16",
+   "_name": "DLC1HuskyBareRace"
+  },
+  {
+   "race": "Dragonborn.esm|01B658",
+   "list": "Savage Requiem World.esp|000F1B",
+   "_name": "DLC2AshHopperRace"
+  },
+  {
+   "race": "Dragonborn.esm|024038",
+   "list": "Savage Requiem World.esp|000F1D",
+   "_name": "DLC2BoarRace"
+  },
+  {
+   "race": "Dragonborn.esm|014495",
+   "list": "Savage Requiem World.esp|000F22",
+   "_name": "DLC2LurkerRace"
+  },
+  {
+   "race": "Dragonborn.esm|0179CF",
+   "list": "Savage Requiem World.esp|000F23",
+   "_name": "DLC2MountedRieklingRace"
+  },
+  {
+   "race": "Dragonborn.esm|01FEB8",
+   "list": "Savage Requiem World.esp|000F25",
+   "_name": "DLC2NetchRace"
+  },
+  {
+   "race": "Dragonborn.esm|017F44",
+   "list": "Savage Requiem World.esp|000F23",
+   "_name": "DLC2RieklingRace"
+  },
+  {
+   "race": "Dragonborn.esm|01DCB9",
+   "list": "Savage Requiem World.esp|000F26",
+   "_name": "DLC2SeekerRace"
+  },
+  {
+   "race": "Dragonborn.esm|01B644",
+   "list": "Savage Requiem World.esp|000F18",
+   "_name": "DLC2SprigganBurntRace"
+  },
+  {
+   "race": "Dragonborn.esm|01E17B",
+   "list": "Savage Requiem World.esp|000F27",
+   "_name": "DLC2WerebearBeastRace"
+  },
+  {
+   "race": "Skyrim.esm|0131EE",
+   "list": "Savage Requiem World.esp|000F16",
+   "_name": "DogRace"
+  },
+  {
+   "race": "Skyrim.esm|0131F1",
+   "list": "Savage Requiem World.esp|000F1F",
+   "_name": "DwarvenCenturionRace"
+  },
+  {
+   "race": "Skyrim.esm|0131F2",
+   "list": "Savage Requiem World.esp|000F1F",
+   "_name": "DwarvenSphereRace"
+  },
+  {
+   "race": "Skyrim.esm|0131F3",
+   "list": "Savage Requiem World.esp|00102C",
+   "_name": "DwarvenSpiderRace"
+  },
+  {
+   "race": "Skyrim.esm|109C7C",
+   "list": "Savage Requiem World.esp|000F2C",
+   "_name": "FoxRace"
+  },
+  {
+   "race": "Skyrim.esm|0131F8",
+   "list": "Savage Requiem World.esp|000F28",
+   "_name": "FrostbiteSpiderRace"
+  },
+  {
+   "race": "Skyrim.esm|04E507",
+   "list": "Savage Requiem World.esp|000F28",
+   "_name": "FrostbiteSpiderRaceGiant"
+  },
+  {
+   "race": "Skyrim.esm|053477",
+   "list": "Savage Requiem World.esp|000F28",
+   "_name": "FrostbiteSpiderRaceLarge"
+  },
+  {
+   "race": "Skyrim.esm|0131F9",
+   "list": "Savage Requiem World.esp|000F19",
+   "_name": "GiantRace-Intended"
+  },
+  {
+   "race": "Skyrim.esm|06DC99",
+   "list": "Savage Requiem World.esp|000F2F",
+   "_name": "HareRace"
+  },
+  {
+   "race": "Skyrim.esm|0131FC",
+   "list": "Savage Requiem World.esp|000F20",
+   "_name": "HorkerRace"
+  },
+  {
+   "race": "Skyrim.esm|0131FE",
+   "list": "Savage Requiem World.esp|000F21",
+   "_name": "IceWraithRace"
+  },
+  {
+   "race": "Skyrim.esm|0131FF",
+   "list": "Savage Requiem World.esp|000F31",
+   "_name": "MammothRace"
+  },
+  {
+   "race": "Skyrim.esm|0BA545",
+   "list": "Savage Requiem World.esp|000F24",
+   "_name": "MudcrabRace"
+  },
+  {
+   "race": "Skyrim.esm|013200",
+   "list": "Savage Requiem World.esp|000F17",
+   "_name": "SabreCatRace"
+  },
+  {
+   "race": "Skyrim.esm|013202",
+   "list": "Savage Requiem World.esp|000F17",
+   "_name": "SabreCatSnowyRace"
+  },
+  {
+   "race": "Skyrim.esm|013201",
+   "list": "Savage Requiem World.esp|000F32",
+   "_name": "SkeeverRace"
+  },
+  {
+   "race": "Skyrim.esm|013203",
+   "list": "Savage Requiem World.esp|000F3B",
+   "_name": "SlaughterfishRace"
+  },
+  {
+   "race": "Dawnguard.esm|013B77",
+   "list": "Savage Requiem World.esp|000F18",
+   "_name": "SprigganEarthMotherRace"
+  },
+  {
+   "race": "Skyrim.esm|013204",
+   "list": "Savage Requiem World.esp|000F18",
+   "_name": "SprigganRace"
+  },
+  {
+   "race": "Skyrim.esm|013206",
+   "list": "Savage Requiem World.esp|000F35",
+   "_name": "TrollFrostRace"
+  },
+  {
+   "race": "Skyrim.esm|013205",
+   "list": "Savage Requiem World.esp|000F35",
+   "_name": "TrollRace"
+  },
+  {
+   "race": "Skyrim.esm|0CDD84",
+   "list": "Savage Requiem World.esp|000F27",
+   "_name": "WerewolfBeastRace"
+  },
+  {
+   "race": "Skyrim.esm|01320A",
+   "list": "Savage Requiem World.esp|000F37",
+   "_name": "WolfRace"
+  }
+ ],
+ "ai_by_race": [
+  {
+   "race": "Skyrim.esm|0CF89B",
+   "_name": "Deer",
+   "aggression": 0,
+   "confidence": 0,
+   "assistance": 0
+  },
+  {
+   "race": "Skyrim.esm|0131ED",
+   "_name": "Elk (incl. Megaloceros)",
+   "aggression": 0,
+   "confidence": 0,
+   "assistance": 0
+  },
+  {
+   "race": "Skyrim.esm|0BA545",
+   "_name": "Mudcrab",
+   "aggression": 0,
+   "confidence": 1,
+   "assistance": 0,
+   "aggroRadius": false
+  }
+ ]
+}

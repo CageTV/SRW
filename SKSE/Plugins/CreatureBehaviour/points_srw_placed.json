@@ -2842,21 +2842,6 @@
    "minGapHours": 72
   },
   {
-   "id": "srw-0189-0422AF",
-   "plugin": "Skyrim.esm",
-   "form": "0422AF",
-   "world": "00003C",
-   "worldPlugin": "Skyrim.esm",
-   "pos": [
-    -13314.7,
-    -83531.4,
-    860.4
-   ],
-   "when": "any",
-   "cap": 1,
-   "minGapHours": 72
-  },
-  {
    "id": "srw-0190-0EC968",
    "plugin": "Skyrim.esm",
    "form": "0EC968",
@@ -2866,21 +2851,6 @@
     -13955.1,
     -82941.8,
     414.3
-   ],
-   "when": "any",
-   "cap": 1,
-   "minGapHours": 72
-  },
-  {
-   "id": "srw-0191-0422AF",
-   "plugin": "Skyrim.esm",
-   "form": "0422AF",
-   "world": "00003C",
-   "worldPlugin": "Skyrim.esm",
-   "pos": [
-    -15540.4,
-    -87394.4,
-    798.9
    ],
    "when": "any",
    "cap": 1,
@@ -2926,51 +2896,6 @@
     -21100.9,
     -88103.3,
     -95.4
-   ],
-   "when": "any",
-   "cap": 1,
-   "minGapHours": 72
-  },
-  {
-   "id": "srw-0195-mihailcyrodillianwolfalp",
-   "plugin": "Savage Requiem World.esp",
-   "form": "001226",
-   "world": "00003C",
-   "worldPlugin": "Skyrim.esm",
-   "pos": [
-    -24994.2,
-    -90955.3,
-    -517.8
-   ],
-   "when": "any",
-   "cap": 1,
-   "minGapHours": 72
-  },
-  {
-   "id": "srw-0196-mihailcyrodillianwolf",
-   "plugin": "Savage Requiem World.esp",
-   "form": "00121B",
-   "world": "00003C",
-   "worldPlugin": "Skyrim.esm",
-   "pos": [
-    -25181.8,
-    -91086.2,
-    -511.9
-   ],
-   "when": "any",
-   "cap": 1,
-   "minGapHours": 72
-  },
-  {
-   "id": "srw-0197-mihailcyrodillianwolf4",
-   "plugin": "Savage Requiem World.esp",
-   "form": "001224",
-   "world": "00003C",
-   "worldPlugin": "Skyrim.esm",
-   "pos": [
-    -25574.8,
-    -91090.3,
-    -516.3
    ],
    "when": "any",
    "cap": 1,
@@ -3232,51 +3157,6 @@
    "minGapHours": 72
   },
   {
-   "id": "srw-0215-0422AF",
-   "plugin": "Skyrim.esm",
-   "form": "0422AF",
-   "world": "00003C",
-   "worldPlugin": "Skyrim.esm",
-   "pos": [
-    -18098.0,
-    -90076.2,
-    1620.6
-   ],
-   "when": "any",
-   "cap": 1,
-   "minGapHours": 72
-  },
-  {
-   "id": "srw-0216-0422AF",
-   "plugin": "Skyrim.esm",
-   "form": "0422AF",
-   "world": "00003C",
-   "worldPlugin": "Skyrim.esm",
-   "pos": [
-    -19621.1,
-    -89319.0,
-    285.1
-   ],
-   "when": "any",
-   "cap": 1,
-   "minGapHours": 72
-  },
-  {
-   "id": "srw-0217-0422AF",
-   "plugin": "Skyrim.esm",
-   "form": "0422AF",
-   "world": "00003C",
-   "worldPlugin": "Skyrim.esm",
-   "pos": [
-    -15782.7,
-    -80217.3,
-    726.5
-   ],
-   "when": "any",
-   "cap": 1,
-   "minGapHours": 72
-  },
-  {
    "id": "srw-0218-0422AF",
    "plugin": "Skyrim.esm",
    "form": "0422AF",
@@ -3436,21 +3316,6 @@
     -24484.1,
     -77835.4,
     1401.6
-   ],
-   "when": "any",
-   "cap": 1,
-   "minGapHours": 72
-  },
-  {
-   "id": "srw-0229-0422AF",
-   "plugin": "Skyrim.esm",
-   "form": "0422AF",
-   "world": "00003C",
-   "worldPlugin": "Skyrim.esm",
-   "pos": [
-    -21805.1,
-    -81080.8,
-    -869.3
    ],
    "when": "any",
    "cap": 1,
@@ -3667,21 +3532,6 @@
    "minGapHours": 72
   },
   {
-   "id": "srw-0244-0422AF",
-   "plugin": "Skyrim.esm",
-   "form": "0422AF",
-   "world": "00003C",
-   "worldPlugin": "Skyrim.esm",
-   "pos": [
-    -39654.9,
-    -59145.2,
-    1463.3
-   ],
-   "when": "any",
-   "cap": 1,
-   "minGapHours": 72
-  },
-  {
    "id": "srw-0245-0EC968",
    "plugin": "Skyrim.esm",
    "form": "0EC968",
@@ -3691,81 +3541,6 @@
     -62540.6,
     -59028.4,
     -177.3
-   ],
-   "when": "any",
-   "cap": 1,
-   "minGapHours": 72
-  },
-  {
-   "id": "srw-0246-0422AF",
-   "plugin": "Skyrim.esm",
-   "form": "0422AF",
-   "world": "00003C",
-   "worldPlugin": "Skyrim.esm",
-   "pos": [
-    -35626.9,
-    -65474.0,
-    703.8
-   ],
-   "when": "any",
-   "cap": 1,
-   "minGapHours": 72
-  },
-  {
-   "id": "srw-0247-0422AF",
-   "plugin": "Skyrim.esm",
-   "form": "0422AF",
-   "world": "00003C",
-   "worldPlugin": "Skyrim.esm",
-   "pos": [
-    -37717.4,
-    -63974.1,
-    567.5
-   ],
-   "when": "any",
-   "cap": 1,
-   "minGapHours": 72
-  },
-  {
-   "id": "srw-0248-0422AF",
-   "plugin": "Skyrim.esm",
-   "form": "0422AF",
-   "world": "00003C",
-   "worldPlugin": "Skyrim.esm",
-   "pos": [
-    -37818.3,
-    -61908.5,
-    942.5
-   ],
-   "when": "any",
-   "cap": 1,
-   "minGapHours": 72
-  },
-  {
-   "id": "srw-0249-0422AF",
-   "plugin": "Skyrim.esm",
-   "form": "0422AF",
-   "world": "00003C",
-   "worldPlugin": "Skyrim.esm",
-   "pos": [
-    -42086.7,
-    -65005.6,
-    262.2
-   ],
-   "when": "any",
-   "cap": 1,
-   "minGapHours": 72
-  },
-  {
-   "id": "srw-0250-0422AF",
-   "plugin": "Skyrim.esm",
-   "form": "0422AF",
-   "world": "00003C",
-   "worldPlugin": "Skyrim.esm",
-   "pos": [
-    -44604.0,
-    -63608.7,
-    721.8
    ],
    "when": "any",
    "cap": 1,
@@ -3922,36 +3697,6 @@
    "minGapHours": 72
   },
   {
-   "id": "srw-0261-0422AF",
-   "plugin": "Skyrim.esm",
-   "form": "0422AF",
-   "world": "00003C",
-   "worldPlugin": "Skyrim.esm",
-   "pos": [
-    -40604.6,
-    -66105.4,
-    422.1
-   ],
-   "when": "any",
-   "cap": 1,
-   "minGapHours": 72
-  },
-  {
-   "id": "srw-0262-0422AF",
-   "plugin": "Skyrim.esm",
-   "form": "0422AF",
-   "world": "00003C",
-   "worldPlugin": "Skyrim.esm",
-   "pos": [
-    -42211.0,
-    -67899.0,
-    200.4
-   ],
-   "when": "any",
-   "cap": 1,
-   "minGapHours": 72
-  },
-  {
    "id": "srw-0263-mihailsquirrel",
    "plugin": "Savage Requiem World.esp",
    "form": "0013DB",
@@ -3961,21 +3706,6 @@
     -41466.7,
     -68674.0,
     247.6
-   ],
-   "when": "any",
-   "cap": 1,
-   "minGapHours": 72
-  },
-  {
-   "id": "srw-0264-0422AF",
-   "plugin": "Skyrim.esm",
-   "form": "0422AF",
-   "world": "00003C",
-   "worldPlugin": "Skyrim.esm",
-   "pos": [
-    -45764.2,
-    -66691.0,
-    -188.3
    ],
    "when": "any",
    "cap": 1,
@@ -4072,81 +3802,6 @@
    "minGapHours": 72
   },
   {
-   "id": "srw-0271-0422AF",
-   "plugin": "Skyrim.esm",
-   "form": "0422AF",
-   "world": "00003C",
-   "worldPlugin": "Skyrim.esm",
-   "pos": [
-    -40028.5,
-    -76711.1,
-    -2596.7
-   ],
-   "when": "any",
-   "cap": 1,
-   "minGapHours": 72
-  },
-  {
-   "id": "srw-0272-0422AF",
-   "plugin": "Skyrim.esm",
-   "form": "0422AF",
-   "world": "00003C",
-   "worldPlugin": "Skyrim.esm",
-   "pos": [
-    -43868.4,
-    -74934.5,
-    -2635.5
-   ],
-   "when": "any",
-   "cap": 1,
-   "minGapHours": 72
-  },
-  {
-   "id": "srw-0273-0422AF",
-   "plugin": "Skyrim.esm",
-   "form": "0422AF",
-   "world": "00003C",
-   "worldPlugin": "Skyrim.esm",
-   "pos": [
-    -43839.6,
-    -76347.7,
-    -2804.4
-   ],
-   "when": "any",
-   "cap": 1,
-   "minGapHours": 72
-  },
-  {
-   "id": "srw-0274-mihailcougar",
-   "plugin": "Savage Requiem World.esp",
-   "form": "001282",
-   "world": "00003C",
-   "worldPlugin": "Skyrim.esm",
-   "pos": [
-    -47173.3,
-    -76428.6,
-    -2774.4
-   ],
-   "when": "any",
-   "cap": 1,
-   "minGapHours": 72
-  },
-  {
-   "id": "srw-0275-0422AF",
-   "plugin": "Skyrim.esm",
-   "form": "0422AF",
-   "world": "00003C",
-   "worldPlugin": "Skyrim.esm",
-   "pos": [
-    -49398.5,
-    -74925.2,
-    -2589.6
-   ],
-   "when": "any",
-   "cap": 1,
-   "minGapHours": 72
-  },
-  {
    "id": "srw-0276-0EC968",
    "plugin": "Skyrim.esm",
    "form": "0EC968",
@@ -4156,51 +3811,6 @@
     -52762.8,
     -73794.7,
     -1770.4
-   ],
-   "when": "any",
-   "cap": 1,
-   "minGapHours": 72
-  },
-  {
-   "id": "srw-0277-0422AF",
-   "plugin": "Skyrim.esm",
-   "form": "0422AF",
-   "world": "00003C",
-   "worldPlugin": "Skyrim.esm",
-   "pos": [
-    -45770.6,
-    -81036.2,
-    -3287.9
-   ],
-   "when": "any",
-   "cap": 1,
-   "minGapHours": 72
-  },
-  {
-   "id": "srw-0278-0422AF",
-   "plugin": "Skyrim.esm",
-   "form": "0422AF",
-   "world": "00003C",
-   "worldPlugin": "Skyrim.esm",
-   "pos": [
-    -52973.7,
-    -79118.9,
-    -2916.6
-   ],
-   "when": "any",
-   "cap": 1,
-   "minGapHours": 72
-  },
-  {
-   "id": "srw-0279-0422AF",
-   "plugin": "Skyrim.esm",
-   "form": "0422AF",
-   "world": "00003C",
-   "worldPlugin": "Skyrim.esm",
-   "pos": [
-    -53122.6,
-    -79073.1,
-    -2877.1
    ],
    "when": "any",
    "cap": 1,
@@ -4267,171 +3877,6 @@
    "minGapHours": 72
   },
   {
-   "id": "srw-0284-0422AF",
-   "plugin": "Skyrim.esm",
-   "form": "0422AF",
-   "world": "00003C",
-   "worldPlugin": "Skyrim.esm",
-   "pos": [
-    -47804.1,
-    -82798.0,
-    -3277.8
-   ],
-   "when": "any",
-   "cap": 1,
-   "minGapHours": 72
-  },
-  {
-   "id": "srw-0285-0422AF",
-   "plugin": "Skyrim.esm",
-   "form": "0422AF",
-   "world": "00003C",
-   "worldPlugin": "Skyrim.esm",
-   "pos": [
-    -48937.1,
-    -82895.0,
-    -3246.1
-   ],
-   "when": "any",
-   "cap": 1,
-   "minGapHours": 72
-  },
-  {
-   "id": "srw-0286-0422AF",
-   "plugin": "Skyrim.esm",
-   "form": "0422AF",
-   "world": "00003C",
-   "worldPlugin": "Skyrim.esm",
-   "pos": [
-    -50515.8,
-    -83018.4,
-    -3069.1
-   ],
-   "when": "any",
-   "cap": 1,
-   "minGapHours": 72
-  },
-  {
-   "id": "srw-0287-mihailcyrodillianwolf4",
-   "plugin": "Savage Requiem World.esp",
-   "form": "001224",
-   "world": "00003C",
-   "worldPlugin": "Skyrim.esm",
-   "pos": [
-    -40512.8,
-    -86458.3,
-    -3800.8
-   ],
-   "when": "any",
-   "cap": 1,
-   "minGapHours": 72
-  },
-  {
-   "id": "srw-0288-mihailcyrodillianwolf4",
-   "plugin": "Savage Requiem World.esp",
-   "form": "001224",
-   "world": "00003C",
-   "worldPlugin": "Skyrim.esm",
-   "pos": [
-    -40597.7,
-    -87196.2,
-    -3777.1
-   ],
-   "when": "any",
-   "cap": 1,
-   "minGapHours": 72
-  },
-  {
-   "id": "srw-0289-mihailcyrodillianwolfalp",
-   "plugin": "Savage Requiem World.esp",
-   "form": "001228",
-   "world": "00003C",
-   "worldPlugin": "Skyrim.esm",
-   "pos": [
-    -41506.6,
-    -86630.7,
-    -3866.4
-   ],
-   "when": "any",
-   "cap": 1,
-   "minGapHours": 72
-  },
-  {
-   "id": "srw-0290-mihailcyrodillianwolf4",
-   "plugin": "Savage Requiem World.esp",
-   "form": "001224",
-   "world": "00003C",
-   "worldPlugin": "Skyrim.esm",
-   "pos": [
-    -41607.8,
-    -86249.0,
-    -3884.5
-   ],
-   "when": "any",
-   "cap": 1,
-   "minGapHours": 72
-  },
-  {
-   "id": "srw-0291-0422AF",
-   "plugin": "Skyrim.esm",
-   "form": "0422AF",
-   "world": "00003C",
-   "worldPlugin": "Skyrim.esm",
-   "pos": [
-    -44252.1,
-    -90012.2,
-    -2120.5
-   ],
-   "when": "any",
-   "cap": 1,
-   "minGapHours": 72
-  },
-  {
-   "id": "srw-0292-0422AF",
-   "plugin": "Skyrim.esm",
-   "form": "0422AF",
-   "world": "00003C",
-   "worldPlugin": "Skyrim.esm",
-   "pos": [
-    -44476.4,
-    -87063.9,
-    -3300.6
-   ],
-   "when": "any",
-   "cap": 1,
-   "minGapHours": 72
-  },
-  {
-   "id": "srw-0293-0422AF",
-   "plugin": "Skyrim.esm",
-   "form": "0422AF",
-   "world": "00003C",
-   "worldPlugin": "Skyrim.esm",
-   "pos": [
-    -50556.9,
-    -87192.7,
-    -2636.3
-   ],
-   "when": "any",
-   "cap": 1,
-   "minGapHours": 72
-  },
-  {
-   "id": "srw-0294-0422AF",
-   "plugin": "Skyrim.esm",
-   "form": "0422AF",
-   "world": "00003C",
-   "worldPlugin": "Skyrim.esm",
-   "pos": [
-    -42786.7,
-    -92661.1,
-    -1234.7
-   ],
-   "when": "any",
-   "cap": 1,
-   "minGapHours": 72
-  },
-  {
    "id": "srw-0295-mihailsquirrel",
    "plugin": "Savage Requiem World.esp",
    "form": "0013DB",
@@ -4441,36 +3886,6 @@
     -40008.9,
     -96872.5,
     -86.4
-   ],
-   "when": "any",
-   "cap": 1,
-   "minGapHours": 72
-  },
-  {
-   "id": "srw-0296-mihailcougar",
-   "plugin": "Savage Requiem World.esp",
-   "form": "001282",
-   "world": "00003C",
-   "worldPlugin": "Skyrim.esm",
-   "pos": [
-    -45542.1,
-    -94967.0,
-    895.3
-   ],
-   "when": "any",
-   "cap": 1,
-   "minGapHours": 72
-  },
-  {
-   "id": "srw-0297-0422AF",
-   "plugin": "Skyrim.esm",
-   "form": "0422AF",
-   "world": "00003C",
-   "worldPlugin": "Skyrim.esm",
-   "pos": [
-    -46678.7,
-    -95550.5,
-    578.2
    ],
    "when": "any",
    "cap": 1,
@@ -4537,21 +3952,6 @@
    "minGapHours": 72
   },
   {
-   "id": "srw-0302-0422AF",
-   "plugin": "Skyrim.esm",
-   "form": "0422AF",
-   "world": "00003C",
-   "worldPlugin": "Skyrim.esm",
-   "pos": [
-    -36510.8,
-    -88264.6,
-    -2409.7
-   ],
-   "when": "any",
-   "cap": 1,
-   "minGapHours": 72
-  },
-  {
    "id": "srw-0303-mihailsquirrel",
    "plugin": "Savage Requiem World.esp",
    "form": "0013DB",
@@ -4561,36 +3961,6 @@
     -33257.5,
     -82085.6,
     -2802.4
-   ],
-   "when": "any",
-   "cap": 1,
-   "minGapHours": 72
-  },
-  {
-   "id": "srw-0304-mihailcougar",
-   "plugin": "Savage Requiem World.esp",
-   "form": "001282",
-   "world": "00003C",
-   "worldPlugin": "Skyrim.esm",
-   "pos": [
-    -34174.1,
-    -93609.7,
-    -283.7
-   ],
-   "when": "any",
-   "cap": 1,
-   "minGapHours": 72
-  },
-  {
-   "id": "srw-0305-mihailcyrodillianwolf",
-   "plugin": "Savage Requiem World.esp",
-   "form": "00121B",
-   "world": "00003C",
-   "worldPlugin": "Skyrim.esm",
-   "pos": [
-    -44584.9,
-    -97596.0,
-    167.3
    ],
    "when": "any",
    "cap": 1,
@@ -6682,21 +6052,6 @@
    "minGapHours": 72
   },
   {
-   "id": "srw-0445-042478",
-   "plugin": "Skyrim.esm",
-   "form": "042478",
-   "world": "00003C",
-   "worldPlugin": "Skyrim.esm",
-   "pos": [
-    -35765.8,
-    73375.4,
-    -13238.6
-   ],
-   "when": "any",
-   "cap": 1,
-   "minGapHours": 72
-  },
-  {
    "id": "srw-0446-sewerratnpc",
    "plugin": "Savage Requiem World.esp",
    "form": "001341",
@@ -6751,36 +6106,6 @@
     -39562.7,
     68785.5,
     -13675.6
-   ],
-   "when": "any",
-   "cap": 1,
-   "minGapHours": 72
-  },
-  {
-   "id": "srw-0450-042478",
-   "plugin": "Skyrim.esm",
-   "form": "042478",
-   "world": "00003C",
-   "worldPlugin": "Skyrim.esm",
-   "pos": [
-    -37744.0,
-    77392.0,
-    -13696.0
-   ],
-   "when": "any",
-   "cap": 1,
-   "minGapHours": 72
-  },
-  {
-   "id": "srw-0451-042478",
-   "plugin": "Skyrim.esm",
-   "form": "042478",
-   "world": "00003C",
-   "worldPlugin": "Skyrim.esm",
-   "pos": [
-    -35760.0,
-    73760.0,
-    -13408.0
    ],
    "when": "any",
    "cap": 1,
@@ -7951,21 +7276,6 @@
     -82702.1,
     98466.0,
     -10053.7
-   ],
-   "when": "any",
-   "cap": 1,
-   "minGapHours": 72
-  },
-  {
-   "id": "srw-0530-mihailsnowleopard",
-   "plugin": "Savage Requiem World.esp",
-   "form": "001286",
-   "world": "00003C",
-   "worldPlugin": "Skyrim.esm",
-   "pos": [
-    -73481.7,
-    113623.8,
-    -1523.0
    ],
    "when": "any",
    "cap": 1,
@@ -9532,66 +8842,6 @@
    "minGapHours": 72
   },
   {
-   "id": "srw-0635-mihailcyrodillianwolfalp",
-   "plugin": "Savage Requiem World.esp",
-   "form": "001228",
-   "world": "00003C",
-   "worldPlugin": "Skyrim.esm",
-   "pos": [
-    88578.7,
-    -64100.1,
-    11217.4
-   ],
-   "when": "any",
-   "cap": 1,
-   "minGapHours": 72
-  },
-  {
-   "id": "srw-0636-mihailcyrodillianwolf4",
-   "plugin": "Savage Requiem World.esp",
-   "form": "001224",
-   "world": "00003C",
-   "worldPlugin": "Skyrim.esm",
-   "pos": [
-    88232.3,
-    -64482.9,
-    11224.0
-   ],
-   "when": "any",
-   "cap": 1,
-   "minGapHours": 72
-  },
-  {
-   "id": "srw-0637-mihailcyrodillianwolf",
-   "plugin": "Savage Requiem World.esp",
-   "form": "00121B",
-   "world": "00003C",
-   "worldPlugin": "Skyrim.esm",
-   "pos": [
-    88692.8,
-    -64609.5,
-    11156.0
-   ],
-   "when": "any",
-   "cap": 1,
-   "minGapHours": 72
-  },
-  {
-   "id": "srw-0638-mihailcyrodillianwolf2",
-   "plugin": "Savage Requiem World.esp",
-   "form": "00121E",
-   "world": "00003C",
-   "worldPlugin": "Skyrim.esm",
-   "pos": [
-    88900.6,
-    -64179.9,
-    11169.5
-   ],
-   "when": "any",
-   "cap": 1,
-   "minGapHours": 72
-  },
-  {
    "id": "srw-0639-mihailpigeon",
    "plugin": "Savage Requiem World.esp",
    "form": "000CDD",
@@ -9691,21 +8941,6 @@
     75254.7,
     -61213.1,
     10686.5
-   ],
-   "when": "any",
-   "cap": 1,
-   "minGapHours": 72
-  },
-  {
-   "id": "srw-0646-mihailcougar",
-   "plugin": "Savage Requiem World.esp",
-   "form": "001282",
-   "world": "00003C",
-   "worldPlugin": "Skyrim.esm",
-   "pos": [
-    75639.4,
-    -55693.2,
-    9905.1
    ],
    "when": "any",
    "cap": 1,
@@ -10222,36 +9457,6 @@
    "minGapHours": 72
   },
   {
-   "id": "srw-0681-EncElk",
-   "plugin": "Skyrim.esm",
-   "form": "023A91",
-   "world": "00003C",
-   "worldPlugin": "Skyrim.esm",
-   "pos": [
-    25716.8,
-    15767.2,
-    -3657.7
-   ],
-   "when": "any",
-   "cap": 1,
-   "minGapHours": 72
-  },
-  {
-   "id": "srw-0682-mihailsmilodon_cat",
-   "plugin": "Savage Requiem World.esp",
-   "form": "000E5C",
-   "world": "00003C",
-   "worldPlugin": "Skyrim.esm",
-   "pos": [
-    25694.9,
-    15673.4,
-    -3670.4
-   ],
-   "when": "any",
-   "cap": 1,
-   "minGapHours": 72
-  },
-  {
    "id": "srw-0683-mihailsmilodonSNOW_cat",
    "plugin": "Savage Requiem World.esp",
    "form": "000E61",
@@ -10291,21 +9496,6 @@
     16214.1,
     86684.0,
     -11027.6
-   ],
-   "when": "any",
-   "cap": 1,
-   "minGapHours": 72
-  },
-  {
-   "id": "srw-0686-mihailsmilodonSNOW_cat",
-   "plugin": "Savage Requiem World.esp",
-   "form": "000E61",
-   "world": "00003C",
-   "worldPlugin": "Skyrim.esm",
-   "pos": [
-    16441.1,
-    86646.6,
-    -11027.2
    ],
    "when": "any",
    "cap": 1,
@@ -12496,21 +11686,6 @@
     150254.3,
     -42859.9,
     2119.5
-   ],
-   "when": "any",
-   "cap": 1,
-   "minGapHours": 72
-  },
-  {
-   "id": "srw-0833-mihailcyrodillianwolfRAB",
-   "plugin": "Savage Requiem World.esp",
-   "form": "001275",
-   "world": "00003C",
-   "worldPlugin": "Skyrim.esm",
-   "pos": [
-    142842.0,
-    -105422.0,
-    10798.0
    ],
    "when": "any",
    "cap": 1,

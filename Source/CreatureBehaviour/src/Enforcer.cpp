@@ -21,6 +21,13 @@
 //   weapon_keyword     : { "nameContains": [..], "nameExclude": [..], "requireAny": [kw..], "requireAll": [kw..], "keyword": kw }
 //   armor_warmth       : { "warm": kw, "cold": kw, "warmIfAny": [kw..], "coldIfAny": [kw..], "slotMask": n }
 //   player_perks       : ["Plugin|ID", ...]
+//   leveled_edit       : { "list": "Plugin|ID", "add": [{"form": "Plugin|ID", "level": n, "count": n, "times": n}], "remove": [...] }  leveled NPC list entries;
+//                        an entry is added until the list holds "times" copies of it, so it is idempotent; a form from a mod that is not loaded is skipped
+//   race_spell_add     : { "races": ["Plugin|ID", ...], "spells": ["Plugin|ID", ...] }   a spell, ability or power is added to the race
+//   npc_spell_add      : { "npcs": [...], "spells": [...] }
+//   npc_perk_add       : { "npcs": [...], "perks": [...] }
+//   leveled_edit may also carry "flags_set": n (bits of the leveled list flags to turn on)
+//   any rule may carry "requires": "Plugin.esp" and is then skipped, quietly, when that plugin is not loaded
 namespace Enforcer
 {
 	namespace
@@ -366,6 +373,194 @@ namespace Enforcer
 
 		// Placed references of other mods that should never be there (for example the SkyTEST rats and spiders in the Helgen cave).
 		// The initially-disabled flag is set before the cell loads, so they never appear.
+		void LeveledEdit(const nlohmann::json& a_r, Tally& t)
+		{
+			auto* f0 = Find(a_r.value("list", ""));
+			auto* list = f0 ? f0->As<RE::TESLevCharacter>() : nullptr;
+			if (!list) {
+				++t.missing;
+				return;
+			}
+			const auto holds = [&](const RE::TESForm* a_f, int a_level, int a_count) {
+				int n = 0;
+				for (std::uint8_t i = 0; i < list->numEntries; ++i) {
+					const auto& e = list->entries[i];
+					n += (e.form == a_f && e.level == a_level && e.count == a_count) ? 1 : 0;
+				}
+				return n;
+			};
+			if (a_r.contains("flags_set") && a_r["flags_set"].is_number_integer()) {
+				const auto bits = static_cast<std::uint8_t>(a_r["flags_set"].get<int>());
+				if ((static_cast<std::uint8_t>(list->llFlags) & bits) != bits) {
+					list->llFlags = static_cast<RE::TESLeveledList::Flag>(static_cast<std::uint8_t>(list->llFlags) | bits);
+					++t.changed;
+				}
+			}
+			// removals first (compact in place)
+			if (a_r.contains("remove") && a_r["remove"].is_array()) {
+				for (const auto& it : a_r["remove"]) {
+					auto* f = Find(it.value("form", ""));
+					if (!f) {
+						continue;
+					}
+					int left = it.value("times", 1);
+					const int level = it.value("level", 1), cnt = it.value("count", 1);
+					std::uint8_t out = 0;
+					for (std::uint8_t i = 0; i < list->numEntries; ++i) {
+						const auto& e = list->entries[i];
+						if (left > 0 && e.form == f && e.level == level && e.count == cnt) {
+							--left;
+							++t.changed;
+							continue;
+						}
+						if (out != i) {
+							list->entries[out] = list->entries[i];
+						}
+						++out;
+					}
+					list->numEntries = out;
+				}
+			}
+			struct Add
+			{
+				RE::TESForm* form;
+				int          level, count;
+			};
+			std::vector<Add> adds;
+			if (a_r.contains("add") && a_r["add"].is_array()) {
+				for (const auto& it : a_r["add"]) {
+					auto* f = Find(it.value("form", ""));
+					if (!f) {
+						++t.missing;
+						continue;
+					}
+					const int level = it.value("level", 1), cnt = it.value("count", 1), times = it.value("times", 1);
+					const int need = times - holds(f, level, cnt) - static_cast<int>(std::count_if(adds.begin(), adds.end(), [&](const Add& a) { return a.form == f && a.level == level && a.count == cnt; }));
+					if (need <= 0) {
+						++t.already;
+						continue;
+					}
+					for (int k = 0; k < need; ++k) {
+						adds.push_back({ f, level, cnt });
+					}
+				}
+			}
+			if (adds.empty()) {
+				return;
+			}
+			const std::size_t room = 255u - list->numEntries;
+			if (adds.size() > room) {
+				SKSE::log::warn("leveled_edit: {} would get {} entries, only {} fit in a leveled list; the rest is dropped", a_r.value("_name", a_r.value("list", std::string("?"))), adds.size(), room);
+				adds.resize(room);
+			}
+			const std::size_t total = list->numEntries + adds.size();
+			if (list->entries.size() < total) {
+				list->entries.resize(total);
+			}
+			for (const auto& a : adds) {
+				auto& e = list->entries[list->numEntries++];
+				e.form = a.form;
+				e.count = static_cast<std::uint16_t>(a.count);
+				e.level = static_cast<std::uint16_t>(a.level);
+				e.pad0C = 0;
+				e.itemExtra = nullptr;
+				++t.changed;
+			}
+		}
+
+		std::vector<RE::TESForm*> FindAll(const nlohmann::json& a_r, const char* a_key)
+		{
+			std::vector<RE::TESForm*> out;
+			for (const auto& ref : Strings(a_r, a_key)) {
+				if (auto* f = Find(ref)) {
+					out.push_back(f);
+				}
+			}
+			return out;
+		}
+
+		void AddSpellTo(RE::TESSpellList::SpellData* a_list, RE::SpellItem* a_spell, Tally& t)
+		{
+			if (!a_list) {
+				++t.missing;
+				return;
+			}
+			if (a_list->GetIndex(a_spell).has_value()) {
+				++t.already;
+				return;
+			}
+			if (a_list->AddSpell(a_spell)) {
+				++t.changed;
+			}
+		}
+
+		void RaceSpellAdd(const nlohmann::json& a_r, Tally& t)
+		{
+			const auto spells = FindAll(a_r, "spells");
+			for (auto* f : FindAll(a_r, "races")) {
+				auto* race = f->As<RE::TESRace>();
+				if (!race) {
+					continue;
+				}
+				for (auto* sf : spells) {
+					if (auto* sp = sf->As<RE::SpellItem>()) {
+						AddSpellTo(race->actorEffects, sp, t);
+					}
+				}
+			}
+			if (spells.empty()) {
+				++t.missing;
+			}
+		}
+
+		void NpcSpellAdd(const nlohmann::json& a_r, Tally& t)
+		{
+			const auto spells = FindAll(a_r, "spells");
+			for (auto* f : FindAll(a_r, "npcs")) {
+				auto* npc = f->As<RE::TESNPC>();
+				if (!npc) {
+					continue;
+				}
+				for (auto* sf : spells) {
+					if (auto* sp = sf->As<RE::SpellItem>()) {
+						AddSpellTo(npc->GetSpellList(), sp, t);
+					}
+				}
+			}
+			if (spells.empty()) {
+				++t.missing;
+			}
+		}
+
+		void NpcPerkAdd(const nlohmann::json& a_r, Tally& t)
+		{
+			const auto perks = FindAll(a_r, "perks");
+			for (auto* f : FindAll(a_r, "npcs")) {
+				auto* npc = f->As<RE::TESNPC>();
+				if (!npc) {
+					continue;
+				}
+				for (auto* pf : perks) {
+					auto* perk = pf->As<RE::BGSPerk>();
+					if (!perk) {
+						continue;
+					}
+					bool has = false;
+					for (std::uint32_t i = 0; i < npc->perkCount; ++i) {
+						has = has || (npc->perks && npc->perks[i].perk == perk);
+					}
+					if (has) {
+						++t.already;
+					} else if (npc->AddPerk(perk, 1)) {
+						++t.changed;
+					}
+				}
+			}
+			if (perks.empty()) {
+				++t.missing;
+			}
+		}
+
 		void DisableRefs(const nlohmann::json& a_r, Tally& t)
 		{
 			for (const auto& ref : Strings(a_r, "refs")) {
@@ -405,6 +600,9 @@ namespace Enforcer
 		const auto run = [&](const char* a_key, auto a_fn) {
 			if (j.contains(a_key) && j[a_key].is_array()) {
 				for (const auto& r : j[a_key]) {
+					if (r.is_object() && r.contains("requires") && !RE::TESDataHandler::GetSingleton()->LookupModByName(r.value("requires", std::string()))) {
+						continue;  // the mod this rule is for is not loaded
+					}
 					++t.rules;
 					try {
 						a_fn(r, t);
@@ -420,6 +618,10 @@ namespace Enforcer
 		run("weapon_keyword", WeaponKeyword);
 		run("armor_warmth", ArmorWarmth);
 		run("disable_refs", DisableRefs);
+		run("leveled_edit", LeveledEdit);
+		run("race_spell_add", RaceSpellAdd);
+		run("npc_spell_add", NpcSpellAdd);
+		run("npc_perk_add", NpcPerkAdd);
 		if (j.contains("ai_by_race") && j["ai_by_race"].is_array()) {
 			++t.rules;
 			AiByRace(j["ai_by_race"], t);

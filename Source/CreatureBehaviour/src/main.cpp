@@ -47,7 +47,7 @@ SKSEPluginLoad(const SKSE::LoadInterface* a_skse)
 {
 	SKSE::Init(a_skse);
 	SetupLog();
-	SKSE::log::info("CreatureBehaviour 0.1.0 (spawn spike + record enforcer), game {}", REL::Module::get().version().string());
+	SKSE::log::info("CreatureBehaviour 0.2.0 (spawn points + record enforcer + Requiem layer), game {}", REL::Module::get().version().string());
 	SKSE::GetMessagingInterface()->RegisterListener(OnMessage);
 	return true;
 }
